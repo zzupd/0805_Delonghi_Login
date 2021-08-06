@@ -7,17 +7,125 @@
 }
 
 #headerFrame header#header {
-  width: 1230px;
+  width: 1300px;
   height: 110px;
   border: 1px solid #aaa;
   margin: 0 auto;
+
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* header#header 시작 */
+
+/* div#headerLogo 시작 */
+header#header div#headerLogo {
+  width: 320px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+/* div#headerLogo 끝 */
+
+/* nav#gnb 시작 */
+header#header nav#gnb {
+  width: 600px;
+  border: 1px solid #fff;
+  margin: 0 10px;
+}
+header#header ul#mainMenu {
+  height: 110px;
+  /* border: 4px solid #0f0; */
+
+  /* position: relative; */
+}
+header#header nav#gnb li.mainLi {
+  text-align: center;
+  /* border: 1px solid #f00; */
+  flex: 1;
+}
+header#header nav#gnb li.mainLi > a {
+  /* width: 100%; */
+  height: 110px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 110px;
+  font-weight: bold;
+  /* border: 1px solid #f80; */
+  display: inline-block;
+}
+
+/* ul.subMenu 시작 */
+
+#gnb ul.subMenu {
+  border: 1px solid #000;
+  position: absolute;
+  z-index: 1;
+
+  /* 디버깅대상 시작 */
+  display: flex;
+  display: none;
+  /* 디버깅대상 끝 */
+}
+
+#gnb ul.subMenu li {
+  border: 1px solid #000;
+}
+#gnb li.subLi a {
+  color: #000;
+  height: 90px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 90px;
+  padding: 0 30px;
+  /* border: 1px solid #000; */
+  display: inline-block;
+}
+
+#gnb li.mainLi:nth-child(3) ul.subMenu {
+  transform: translateX(-148px);
+}
+#gnb li.mainLi:nth-child(4) ul.subMenu {
+  transform: translateX(-295px);
+}
+/* ul.subMenu 끝 */
+
+/* 하이라이트 효과 시작 */
+#header #gnb li.mainLi:hover > a {
+  color: #08f;
+  border-bottom: 4px solid #08f;
+}
+#header #gnb li.subLi > a:hover {
+  color: #08f;
+}
+/* 하이라이트 효과 끝 */
+
+/* nav#gnb 끝 */
+
+/* nav#headerLnb 시작 */
+#header nav#headerLnb {
+  width: 290px;
+  border: 1px solid #fff;
+}
+/* nav#headerLnb 끝 */
+
+/* header#header 끝 */
 
 /* div#headerFrame 끝 */
 
+/* div#subMenuBG 시작 */
+div#subMenuBG {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #f00;
+  background-color: #fff;
+
+  position: absolute;
+}
+/* div#subMenuBG 끝 */
+
 /* div#wrap 시작 */
 div#wrap {
-  width: 1230px;
+  width: 1300px;
   height: 300px; /*임시설정*/
   margin: 0 auto;
 }
