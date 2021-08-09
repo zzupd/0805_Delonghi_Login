@@ -45,7 +45,14 @@
                         <ul class="subMenu">
                             <li class="subLi"><a href="#">멤버십 카드보기</a></li>
                             <li class="subLi"><a href="#">추천 지인 정보</a></li>
-                            <li class="subLi"><a href="#">개인 정보 관리</a></li>
+                            <li class="subLi">
+                                <a href="#">개인 정보 관리</a>
+                                <ul class="subMenu2Depth">
+                                    <!-- depth 뎁스, 단계를 의미함 -->
+                                    <li><a href="#">개인정보수정</a></li>
+                                    <li><a href="#">회원탈퇴</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="mainLi">
@@ -67,24 +74,32 @@
                             <img src="images/icon_login.png" alt="로그인"
                             width="12" height="17">
                         </a>
+                        <br>
+                        <span>로그인</span>
                     </li>
                     <li>
                         <a href="#">
                             <img src="images/icon_cart.png" alt="장바구니"
                             width="21" height="17">
                         </a>
+                        <br>
+                        <span>장바구니</span>
                     </li>
                     <li>
                         <a href="#">
                             <img src="images/icon_join.png" alt="회원가입"
                             width="15" height="15">
                         </a>
+                        <br>
+                        <span>회원가입</span>
                     </li>
                     <li>
                         <a href="#">
                             <img src="images/icon_shipping.png" alt="배송"
                             width="27" height="18">
                         </a>
+                        <br>
+                        <span>주문/배송조회</span>
                     </li>
                 </ul>
             </nav>
@@ -94,7 +109,7 @@
     </div>
     <!-- div#headerFrame -->
 
-    <!-- <div id="subMenuBG"></div> -->
+    <div id="subMenuBG"></div>
     <!-- div#subMenuBG -->
 
     <div id="wrap">
