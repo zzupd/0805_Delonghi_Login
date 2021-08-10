@@ -225,15 +225,172 @@ header#loginTitle {
 }
 
 /* div#multiTabArea 시작 */
+
 div#multiTabArea button {
+  /* 초기상태 버튼스타일 */
   color: #666;
   font-size: 15px;
-  padding: 20px;
+  padding: 22px;
   border: 1px solid #aaa;
   background-color: #fff;
   flex: 1;
 }
+
+div#multiTabArea button:first-child {
+  /* 클릭했을 때 버튼스타일 */
+  color: #3289e8;
+  border: 1px solid #3289e8;
+  border-bottom-color: #fff;
+}
+
+div#multiTabArea button:last-child {
+  /* 클릭하지 않은 버튼스타일 */
+  border-left: none;
+  border-bottom: 1px solid #3289e8;
+}
+
 /* div#multiTabArea 끝 */
+
+/* table#loginTbl 시작 */
+table#loginTbl {
+  width: 100%;
+  /* border: 1px solid #000; */
+  border-spacing: 10px;
+  margin: 34px 0;
+}
+#loginTbl caption {
+  color: #666;
+  font-size: 15px;
+  text-align: left;
+  caption-side: bottom;
+  margin: 8px 0;
+}
+#loginTbl caption::before {
+  content: "\2022";
+}
+
+#loginTbl input {
+  width: 450px;
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+#loginTbl input::placeholder {
+  color: #999;
+}
+#loginTbl input:focus {
+  border: 1px solid #fff;
+  outline: 1px solid #3289e8;
+}
+
+#loginTbl td:first-child {
+  width: 456px;
+  /* border: 1px solid #000; */
+}
+#loginTbl button {
+  width: 240px;
+  height: 120px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  border: 1px solid #3289e8;
+  background-color: #3289e8;
+  display: inline-block;
+  transform: translateX(6px);
+}
+
+#loginTbl button:hover {
+  background-color: rgba(50, 138, 232, 0.815);
+}
+/* table#loginTbl 끝 */
+
+/* div#accountLink 시작 */
+div#accountLink {
+  /* border: 1px solid #000; */
+  align-items: center;
+}
+div#accountLink > div:nth-child(2n + 1) {
+  text-align: center;
+  flex: 1;
+}
+div#accountLink > div:nth-child(2n) {
+  width: 1px;
+  height: 20px;
+}
+div#accountLink div.seperateLine {
+  width: 1px;
+  height: 20px;
+  background-image: url(../images/seperateLine.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* span.accountLinkIcon 시작 */
+div#accountLink > div:nth-child(2n + 1) {
+  justify-content: center;
+  align-items: center;
+}
+#accountLink span.accountLinkIcon {
+  width: 80px;
+  height: 80px;
+  /* border: 1px solid #000; */
+  border-radius: 40px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* 회원가입 링크 시작 */
+#accountLink span#join {
+  background-image: url(../images/icon01_Join.png);
+  background-repeat: no-repeat;
+  background-size: 35px 27px;
+  background-position: center;
+}
+#accountLink div#joinDiv:hover span#join {
+  background-color: #3289e8;
+  background-image: url(../images/icon01_Join_On.png);
+}
+#accountLink div#joinDiv:hover span.accountLinkIconTxt {
+  color: #3289e8;
+}
+/* 회원가입 링크 끝 */
+
+/* 아이디찾기 링크 시작 */
+#accountLink span#findID {
+  background-image: url(../images/icon02_FindID.png);
+  background-repeat: no-repeat;
+  background-size: 34px 27px;
+  background-position: center;
+}
+#accountLink div#findIDDiv:hover span#findID {
+  background-color: #3289e8;
+  background-image: url(../images/icon02_FindID_On.png);
+}
+#accountLink div#findIDDiv:hover span.accountLinkIconTxt {
+  color: #3289e8;
+}
+/* 아이디찾기 링크 끝 */
+
+/* 비밀번호찾기 링크 시작 */
+#accountLink span#findPW {
+  background-image: url(../images/icon03_FindPW.png);
+  background-repeat: no-repeat;
+  background-size: 31px 28px;
+  background-position: center;
+}
+#accountLink div#findPWDiv:hover span#findPW {
+  background-color: #3289e8;
+  background-image: url(../images/icon03_FindPW_On.png);
+}
+#accountLink div#findPWDiv:hover span.accountLinkIconTxt {
+  color: #3289e8;
+}
+/* 비밀번호찾기 링크 끝 */
+
+/* span.accountLinkIcon 끝 */
+
+/* div#accountLink 끝 */
 
 /* form#loginForm 끝 */
 
@@ -242,6 +399,7 @@ div#multiTabArea button {
 /* div#footerFrame 시작 */
 div#footerFrame {
   height: 200px; /*임시설정*/
+  margin-top: 400px;
   background-color: #0c2645;
 }
 /* div#footerFrame 끝 */

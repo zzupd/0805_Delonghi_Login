@@ -144,6 +144,55 @@
             </div>
             <!-- div#multiTabArea -->
 
+            <table id="loginTbl">
+                <tbody>
+                    <caption>
+                        아이디는 회원가입 시
+                        입력한 이메일 또는 
+                        멤버십 번호를 입력해주세요
+                    </caption>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="E-mail" id="userID">
+                        </td>
+                        <td rowspan="2">
+                            <button type="button">LOG IN</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" placeholder="password">
+                        </td>
+                        <!-- <td></td>  rowspan으로 지움-->
+                    </tr>
+                </tbody>
+            </table>
+            <!-- table#loginTbl -->
+
+            
+            <div id="accountLink" class="flex-container">
+                <div id="joinDiv" class="flex-container">
+                    <span id="join" class="accountLinkIcon"></span>
+                    <span class="accountLinkIconTxt">회원가입</span>
+                </div>
+
+                <div class="seperateLine"></div>
+
+                <div id="findIDDiv"  class="flex-container">
+                    <span id="findID" class="accountLinkIcon"></span>
+                    <span class="accountLinkIconTxt">아이디 찾기</span>
+                </div>
+
+                <div class="seperateLine"></div>
+
+                <div id="findPWDiv" class="flex-container">
+                    <span id="findPW" class="accountLinkIcon"></span>
+                    <span class="accountLinkIconTxt">비밀번호</span>
+                </div>
+            </div>
+            <!-- div#accountLink -->
+
+
         </form>
         <!-- form#loginForm -->
 
