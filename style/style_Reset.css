@@ -48,10 +48,11 @@ ul {
 /* Reset */
 
 /* 가이드 라인 (Guide Line, 안내선) */
-
+/* 
 div#wrap {
-  border: 1px solid #000;
-}
+  border: 1px solid #f00;
+} */
+
 /* 
 div#headerFrame {
   border: 1px solid #000;
@@ -65,13 +66,14 @@ header#header {
 /*main#main {
     border: 1px solid #0f0;
 }*/
-
+/* 
 div#footerFrame {
   border: 1px solid #000;
-}
+} */
 
+/* 
 footer#footer {
   border: 1px solid #f80;
-}
+} */
 
 /* 가이드 라인 (Guide Line, 안내선) */

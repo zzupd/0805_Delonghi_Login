@@ -3,8 +3,12 @@
 
 /* div#headerFrame 시작 */
 #headerFrame {
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 110px;
   background-color: #0c2645;
+
+  position: fixed;
+  z-index: 10;
 }
 
 #headerFrame header#header {
@@ -166,15 +170,22 @@ div#subMenuBG {
   background-color: #fff;
 
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 110px;
+
+  z-index: 1;
 }
 /* div#subMenuBG 끝 */
 
 /* div#wrap 시작 */
 div#wrap {
   width: 1000px;
-  height: 300px; /*임시설정*/
+  /* height: 300px;  */
+
+  padding-top: 110px; /* #headerFrame  position: fixed; 적용에 필요함 */
+
   margin: 0 auto;
+  margin-bottom: 200px;
 }
 
 /* div#locator 시작 */
@@ -209,7 +220,7 @@ header#loginTitle {
 /* form#loginForm 시작 */
 #wrap form#loginForm {
   width: 740px;
-  border: 1px solid #aaa;
+  /* border: 1px solid #aaa; */
   padding: 10px;
   margin: 0 auto;
 }
@@ -339,56 +350,50 @@ div#accountLink > div:nth-child(2n + 1) {
   margin-right: 10px;
   display: inline-block;
 }
+/* span.accountLinkIcon 끝 */
+
+/* 계정작업 관련 링크 리팩토리 작업 시작 */
+#accountLink span:first-child {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#accountLink > div:hover > span:first-child {
+  background-color: #3289e8;
+}
+#accountLink > div:hover > span:last-child {
+  color: #3289e8;
+}
+/* 계정작업 관련 링크 리팩토리 작업 끝 */
 
 /* 회원가입 링크 시작 */
 #accountLink span#join {
   background-image: url(../images/icon01_Join.png);
-  background-repeat: no-repeat;
   background-size: 35px 27px;
-  background-position: center;
 }
 #accountLink div#joinDiv:hover span#join {
-  background-color: #3289e8;
   background-image: url(../images/icon01_Join_On.png);
-}
-#accountLink div#joinDiv:hover span.accountLinkIconTxt {
-  color: #3289e8;
 }
 /* 회원가입 링크 끝 */
 
 /* 아이디찾기 링크 시작 */
 #accountLink span#findID {
   background-image: url(../images/icon02_FindID.png);
-  background-repeat: no-repeat;
   background-size: 34px 27px;
-  background-position: center;
 }
 #accountLink div#findIDDiv:hover span#findID {
-  background-color: #3289e8;
   background-image: url(../images/icon02_FindID_On.png);
-}
-#accountLink div#findIDDiv:hover span.accountLinkIconTxt {
-  color: #3289e8;
 }
 /* 아이디찾기 링크 끝 */
 
 /* 비밀번호찾기 링크 시작 */
 #accountLink span#findPW {
   background-image: url(../images/icon03_FindPW.png);
-  background-repeat: no-repeat;
   background-size: 31px 28px;
-  background-position: center;
 }
 #accountLink div#findPWDiv:hover span#findPW {
-  background-color: #3289e8;
   background-image: url(../images/icon03_FindPW_On.png);
 }
-#accountLink div#findPWDiv:hover span.accountLinkIconTxt {
-  color: #3289e8;
-}
 /* 비밀번호찾기 링크 끝 */
-
-/* span.accountLinkIcon 끝 */
 
 /* div#accountLink 끝 */
 
@@ -398,8 +403,66 @@ div#accountLink > div:nth-child(2n + 1) {
 
 /* div#footerFrame 시작 */
 div#footerFrame {
-  height: 200px; /*임시설정*/
-  margin-top: 400px;
   background-color: #0c2645;
 }
+
+#footerFrame footer#footer {
+  padding: 70px 0 140px;
+  /* border: 1px solid #eee; */
+  margin: 0px auto;
+  /* margin-bottom: 40px; */
+}
+
+#footerFrame nav#footerLnb,
+#footerFrame div#footerLogo,
+#footerFrame div#companyArea {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* nav#footerLnb 시작 */
+#footerFrame nav#footerLnb ul {
+  justify-content: center;
+}
+#footerFrame nav#footerLnb ul li {
+  margin: 0 36px;
+  list-style-type: disc;
+}
+#footerFrame nav#footerLnb li::marker {
+  color: #7bf;
+}
+#footerFrame nav#footerLnb a {
+  color: #fff;
+}
+/* nav#footerLnb 끝 */
+
+#footerFrame hr {
+  border: none;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.6);
+  margin: 22px 0;
+}
+
+/* div#footerLogo 시작 */
+#footerFrame div#footerLogo {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 17px;
+}
+/* div#footerLogo 끝 */
+
+/* div#companyArea 시작 */
+#footerFrame div#companyArea span {
+  color: #999;
+  font-size: 13px;
+  font-style: normal;
+  margin: 0 10px;
+}
+#footerFrame div#companyInfo,
+#footerFrame address,
+#footerFrame div#customContact {
+  text-align: center;
+  line-height: 22px;
+}
+/* div#companyArea 끝 */
+
 /* div#footerFrame 끝 */
